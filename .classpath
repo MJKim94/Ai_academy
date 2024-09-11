@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="01_SumAlgorithm"/>
+	<classpathentry kind="src" path="02_CountAlgorithm"/>
+	<classpathentry kind="src" path="03_AverageAlgorithm"/>
+	<classpathentry kind="src" path="04_MaxAlgorithm"/>
+	<classpathentry kind="src" path="05_MinAlgorithm"/>
+	<classpathentry kind="src" path="06_NearAlgorithm"/>
+	<classpathentry kind="src" path="07_RankAlgorithm ★★★"/>
+	<classpathentry kind="src" path="08_SortAlgorithm"/>
+	<classpathentry kind="src" path="ch10_abstract/src"/>
+	<classpathentry kind="src" path="ch11_interface/src"/>
+	<classpathentry kind="src" path="ch15_collection/src"/>
+	<classpathentry kind="src" path="ch16_io/src"/>
+	<classpathentry kind="src" path="Hello World"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="output" path="ch10_abstract/bin"/>
+</classpath>
