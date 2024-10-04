@@ -1,0 +1,10 @@
+﻿/*
+2.css 파일(2.html과 같은 폴더)
+디자인 영역(CSS) CSS선택자{속성:속성값;}
+
+*/
+body {
+    background-color: yellow;
+    font-size: 30pt;
+}
+

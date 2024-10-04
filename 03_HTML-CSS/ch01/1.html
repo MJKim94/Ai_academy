@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
+<head><!--head 영역 : 설정 정보-->
+    <meta charset="utf-8" />
+    <title>첫번째 예제</title>
+    <style> /*디자인 영역(CSS) CSS선택자{속성:속성값;}*/
+        body{
+            background-color:yellow;
+            font-size: 30pt;
+        }
+    </style>
+    <script> /* 동적인 부분(JavaScript)*/
+        name = prompt("이름은 ?", "홍길동"); // 취소를 클릭하면 'null' 리턴
+        if (name != "null" && name != "") {
+            document.write(name + "님 반갑습니다<br>");
+        }
+    </script>
+</head>
+<body>
+    <!-- body 부분 : 웹문서에 출력될 정보 -->
+    안녕하세요.<br />
+    2024-10-04일 부터 웹표준 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 수업 시작합니다.
+</body>
+</html>
