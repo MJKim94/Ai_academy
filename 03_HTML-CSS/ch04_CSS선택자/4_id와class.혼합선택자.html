@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div{
+            border:1px solid #CCCCCC;
+            text-align:center;
+        }
+        #header{
+            width:600px; margin:0 auto;
+            background-color:lightyellow;
+            
+        }
+        #wrap {
+            width: 600px;
+            margin: 0 auto;
+            background-color:aqua;
+            overflow:hidden;
+        }
+        #wrap #content{
+            float:left;
+            width:348px; /*#content = width(350px) + border(1+1=2px) = 350px*/
+            height:300px;
+        }
+        #wrap #banner {
+            float:left;
+            width:248px; /* #banner = width(250px) + border(2px) = 250px*/
+            height:300px;
+        }
+        #wrap #content .odd{
+            font-size:1.5em; /*원래 사이즈의 1.5배 라는 뜻*/
+            font-weight:bold;
+        }
+        #wrap #content .menu2, #wrap #content .menu4{
+            font-size:1.2em;
+            color:blue;
+        }
+        #wrap #banner img{width:150px;}
+        #footer{
+            clear:both;
+            width:600px;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>HEADER</h1>
+    </div>
+    <div id="wrap">
+        <div id="content">
+            <h3>content</h3>
+            <ul>
+                <li class="menu1 odd">menu1</li>
+                <li class="menu2">menu2</li>
+                <li class="menu3 odd">menu3</li>
+                <li class="menu4">menu4</li>
+                <li class="odd">menu5</li>
+            </ul>
+        </div>
+    </div>
+    <div id="banner">
+        <h3>BANNER</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm-uCPPoWEDsQjRWs3MrM1nkrcqxygYAXbvg&s" alt="다음 로고" />
+    </div>
+    <div id="footer">
+        <h3>FOOTER</h3>
+    </div>
+</body>
+</html>

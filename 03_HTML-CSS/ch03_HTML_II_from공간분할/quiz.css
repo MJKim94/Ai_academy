@@ -1,0 +1,14 @@
+﻿/*quiz.css*/
+b{color:red;}
+td, p{
+    text-align:center;
+}
+header, #join_form, footer{
+    width:500px;
+    margin:0 auto;
+}
+header{
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+}
