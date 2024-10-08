@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{
+            width:750px; margin:0 auto;
+        }
+        #wrap #header{
+            text-align:center;
+            border-bottom:1px solid lightgray;
+        }
+        #wrap #content{
+            padding: 0 10px;
+            text-align:justify; /*justify : 혼합정렬*/
+            border-bottom:1px solid lightgray;
+        }
+        #content p:nth-child(2):first-line,
+        #content p:nth-child(3):first-line{ /*문자 선택자(첫번째 행)*/
+            color:blue;
+            font-weight:bold;
+            font-size:20px;
+        }
+        #content p:nth-child(2):first-letter,
+        #content p:nth-child(3):first-letter{
+            color:red;
+            font-size:2em;
+        }
+        #content p:nth-child(2)::selection{
+            background-color:violet;
+            color:yellow;
+        }
+        #footer ul{
+            overflow:hidden;            
+        }
+        #footer ul li{
+            float:left;
+            list-style:none;
+        }
+        #footer ul li:first-child{
+            margin:20px 20px 20px 10px;
+        }
+        #footer ul li:last-child{
+            margin: 10px 20px 20px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>제목이나 회사명</h1>
+        </div>
+        <div id="content">
+            <p>오전에 서쪽 오후에는 강원 경상내륙 많은 눈 예상</p>
+            <p>대한민국은 국제평화의 유지에 노력하고 침략적 전쟁을 부인한다. 법률이 정하는 주요방위산업체에 종사하는 근로자의 단체행동권은 법률이 정하는 바에 의하여 이를 제한하거나 인정하지 아니할 수 있다. 국회나 그 위원회의 요구가 있을 때에는 국무총리·국무위원 또는 정부위원은 출석·답변하여야 하며, 국무총리 또는 국무위원이 출석요구를 받은 때에는 국무위원 또는 정부위원으로 하여금 출석·답변하게 할 수 있다.</p>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum</p>
+            <p></p>
+        </div>
+        <div id="footer">
+            <ul>
+                <li><img src="ch04/logo.png" alt="회사로고" /></li>
+                <li><img src="ch04/address.png" alt="회사정보" /></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

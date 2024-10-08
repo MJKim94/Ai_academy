@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{
+            width:750px; margin:0 auto;
+        }
+        #wrap #header{
+            text-align:center;
+            border-bottom:1px solid lightgray;
+        }
+        #wrap #content{
+            padding: 0 10px;
+            text-align:justify; /*justify : 혼합정렬*/
+            border-bottom:1px solid lightgray;
+        }
+        #content ul li a{
+            color:blue;
+            font-size:24px;
+            text-decoration:none;
+            list-style:none;
+        }
+        #content ul li a::after{
+            content: '-' attr(href);
+        }
+        #content ul li:not(.web) a{ /*부정 선택자 li중에서 .web 을 제외하고 싸그리 다*/
+            background-color:yellow;
+        }
+        #footer ul{
+            overflow:hidden;            
+        }
+        #footer ul li{
+            float:left;
+            list-style:none;
+        }
+        #footer ul li:first-child{
+            margin:20px 20px 20px 10px;
+        }
+        #footer ul li:last-child{
+            margin: 10px 20px 20px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>제목이나 회사명</h1>
+        </div>
+        <div id="content">
+            <ul>
+                <li><a href="http://www.naver.com" target="_blank">네이버</a></li>
+                <li class="web"><a href="http://www.google.com" target="_blank">구글</a></li>
+                <li><a href="http://www.daum.net" target="_blank">다음</a></li>
+                <li><a href="http://www.nate.com" target="_blank">네이트</a></li>
+            </ul>
+        </div>
+        <div id="footer">
+            <ul>
+                <li><img src="ch04/logo.png" alt="회사로고" /></li>
+                <li><img src="ch04/address.png" alt="회사정보" /></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
