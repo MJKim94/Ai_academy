@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+/*        ul{
+            overflow:hidden;
+        }*/
+        ul li{
+/*            float:left;*/
+            display:inline-block;
+            width:150px; height:100px;
+            background-color:aqua;
+            border:1px solid red;
+            list-style:none;
+            text-align:center;
+        }
+        ul li:nth-child(1){
+            opacity:1; /*디폴트 값*/
+        }
+        ul li:nth-child(2){
+            opacity:.5; /*opacity 속성 : 0~1, 0(완전불투평)*/
+        }
+        ul li:nth-child(3){
+            opacity:.1;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>대한 민국 만세</li>
+        <li>대한 민국 만세</li>
+        <li>대한 민국 만세</li>
+    </ul>
+</body>
+</html>

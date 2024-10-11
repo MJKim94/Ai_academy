@@ -1,0 +1,37 @@
+﻿
+#wrap{
+    width:600px; margin:0 auto;
+    height:280px;
+    border:1px solid gray;
+    padding:5px;
+}
+#content h2 {
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration:underline;
+}
+#content p:nth-child(2){
+    font-weight:bold;
+}
+#content p:nth-child(3) {
+    color:gray;
+    padding:10px;
+}
+#content p:nth-child(4) {
+    text-align: right;
+    color: gray;
+    height: 10px;
+}
+#footer a::after{
+    content: '-' attr(href);
+}
+#footer li{
+    border-top:1px solid gray;
+    color:blue;
+    text-decoration:none;
+    list-style:none;
+    text-align:center;
+    font-size:1.5em;
+    padding:20px;
+    line-height:30px;
+}
