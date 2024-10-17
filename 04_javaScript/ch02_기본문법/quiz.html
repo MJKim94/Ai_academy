@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        // 사용자로부터 국어, 영어점수 입력받아 국, 영, 평균을 출력
+        let kor, eng;
+        let score = false;
+        do{
+            let korScoreStr = prompt('국어 점수를 입력해주세요 (0 ~ 100점) ', '0 ~ 100점');
+            let engScoreStr = prompt('영어 점수를 입력해주세요 (0 ~ 100점) ', '0 ~ 100점');
+            let korScore = parseInt(korScoreStr);
+            let engScore = parseInt(engScoreStr);
+            if (![korScore, engScore]
+                .every(score => !isNaN(score) && score >= 0 && score <= 100)) 
+                {alert("점수를 올바르게 입력해주세요 (0 ~ 100 사이의 숫자).");
+            } else {
+            document.write('입력하신 국어 점수는: ' + korScore + '<br>');
+            document.write('입력하신 영어 점수는: ' + engScore + '<br>');
+            let average = (korScore + engScore) / 2;
+            document.write('평균 점수는: ' + average.toFixed(2) + '<br>');
+            score = true;            
+        } while (!score);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

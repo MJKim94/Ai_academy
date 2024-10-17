@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <style>
+        body{
+            /* background-image: url(ch05_img/img01.png); */
+            background-size: 100%;
+            font-size: 2em;
+        }
+    </style>
+    <script>
+        document.write('<h1>테스트</h1>');
+        var sec = 0; // 1초 지날대 마다 증가
+        // 컬러 배열
+        var col = ['#ffff00', '#000000', '#ffffff'];
+        // 이미지 배열
+        var img = ['url(ch05_img/img01.png)',
+            'url(ch05_img/img02.png)',
+            'url(ch05_img/img03.png)'];
+        
+        var imgs = setInterval(()=> {
+            document.body.style.backgroundImage = img[sec % img.length];
+            document.body.style.color = col[sec % col.length];
+            document.body.innerHTML = new Date();
+                sec++;
+            },1000);
+            setTimeout(() => {
+                clearInterval(imgs);
+                document.body.innerHTML += sec + '초 지나서 중지함'
+            }, 10000);
+
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        window.onload = function(){ //window : 브라우저 window창이 load되었을때 실행 
+          let list = '';
+          list += '<ul>';
+            list += '<li>HTML</li>';
+            list += '<li>JavaScript</li>';
+            list += '</ul>';
+            // document.write(list);//기존 body내용을 덮어 씀
+            document.body.innerHTML += list;
+        };
+    </script>
+</head>
+<body>
+    <h2>자바스크립 첫날</h2>
+</body>
+</html>

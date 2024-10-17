@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script> // 해당 브라우저에 출력되는 순서는 A -> C -> B 순서로 출력됨
+        document.write('<p>A</p>');
+        setTimeout(()=>{
+            document.body.innerHTML += '<p>B</p>'
+        }, 0);
+        document.write('<p>C</p>')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

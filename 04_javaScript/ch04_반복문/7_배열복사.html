@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        // 배열함수들 : forEach(배열반복),push(배열추가), slice(배열추출) vs, splice(배열제거나 대체)
+        let arr = ['가', '라', '나', '라', '다', '라', '마', '라'];
+        // slice(from, to) : 원본 배열을 바꾸지 않고 from부터 to까지 추출
+        let copyArr = arr.slice(1, 5);
+        copyArr = arr.slice(2, -2);
+        document.write('원본 arr : ' + arr + '<br>');
+        document.write('복사본 arr : ' + copyArr + '<br>');
+        document.write('<hr>');
+        copyArr = arr;
+        copyArr[0] = '왕';
+        document.write('<br>');
+        document.write('원본 arr : ' + arr + '<br>');
+        document.write('복사본 arr : ' + copyArr + '<br>');
+        document.write('<hr>');
+        copyArr = arr.slice(0, arr.length); // 깊은복사
+        copyArr[0] = '엥';
+        document.write('복사본 arr : ' + copyArr + '<br>');
+        document.write('<hr>');
+        copyArr = [...arr]; //깊은 복사
+        copyArr[0] = '옹';
+        document.write('복사본 arr : ' + copyArr + '<br>');
+        document.write('<hr>');
+        copyArr = Array.from(arr);//깊은복사
+        copyArr[0] = '앙';
+        document.write('복사본 arr : ' + copyArr + '<br>');
+        document.write('<hr>');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

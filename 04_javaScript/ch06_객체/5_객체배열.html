@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script src="4_replaceAll.js"></script>
+    <script>
+        let students = [
+            {'name':'윤하린','kor':96, 'mat':98, 'eng':92, 'sci': 98},
+            {'name':'홍길동','kor':92, 'mat':90, 'eng':96, 'sci': 93},
+            {'name':'김길동','kor':42, 'mat':80, 'eng':85, 'sci': 53},
+            {'name':'신길동','kor':52, 'mat':92, 'eng':97, 'sci': 83},
+            {'name':'동길동','kor':97, 'mat':70, 'eng':66, 'sci': 63},
+            {'name':'박길동','kor':82, 'mat':85, 'eng':86, 'sci': 73},                
+        ];
+        for(let idx in students){
+            students[idx].getSum = function(){
+                return this.kor + this.mat + this.eng + this.sci;
+            };
+            students[idx].getAvg = function(){
+                return this.getSum()/4;
+            };
+            students[idx].toString = function(){
+                var output = '';
+                for(let key in this){
+                    if(key != 'getSum' && key != 'getAvg' && key != 'toString'){
+                        output += key + ':' + this[key] + '';
+                    }else if(key == 'getSum'){
+                        output += key.substring(3) + ':' + this[key]() + '';
+                    }else if(key == 'getAvg'){
+                        output += key.substring(3) + ':' + this[key]() + '\n';
+                    }//if
+                }//for
+                return output;
+            };// toString
+        }// for
+        // 1. 일반 for문
+        var out = '';
+        for(let idx=0 ; idx<students.length ; idx++){
+            out += idx + '번째';
+            out += students[idx]; // out = out + students[idx].toString()
+        }
+        alert(out);
+        document.write(replaceAll(out, '\n', '<br>'));
+        document.write('<hr>');
+        //2.for-in문
+        for(var idx in students){
+            document.write(idx + '번째 :' + students[idx] + '<br>');
+        }
+        //3.fot-of문
+        document.write('<hr>');
+        for(var student of students){
+            document.write(student + '<br>');
+        }
+        //4. forEach
+        document.write('<hr>');
+        students.forEach(function(data, idx){
+            document.write(idx + '번째 :' + data + '<br>');
+        });
+        //5. forEach : idx 제거 후 사용하는 방법
+        document.write('<hr>');
+        students.forEach(data => {
+            document.write(data + '<br>');
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

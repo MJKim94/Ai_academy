@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        var str ='abcd'; // = var str = ['a', 'b', 'c', 'd']과 비슷하나, forEach함수 사용불가
+        for(var idx = 0; idx<str.length ; idx++){
+            document.write(idx + '번째 : ' + str[idx] + '<br>');
+        }
+        for(var idx in str){
+            document.write(idx + '번째 : ' + str[idx] + '<br>');
+        }
+        for(var data of str){
+            document.write(data + '<br>');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

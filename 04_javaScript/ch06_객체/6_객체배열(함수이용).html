@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        let students = [makeStudent("홍길동", 98, 48, 45, 75, 85),
+        makeStudent("홍길동", 98, 48, 45, 75, 85),
+        makeStudent("홍길동", 98, 48, 45, 75, 85),
+        ];
+        students.push(makeStudent("홍길동", 98, 48, 45, 75, 85));
+        students.push(makeStudent("홍길동", 98, 48, 45, 75, 85));
+        students.forEach(data => document.write(data + '<hr>'));
+
+
+        //객체를 생성하는 함수 
+        function makeStudent(name, kor, mat, eng, sci){
+            let result ={};
+            result.name = name;
+            result.kor = kor;
+            result.mat = mat;
+            result.eng = eng;
+            result.sci = sci;
+            result.getSum = function(){
+                return this.kor + this.mat + this.eng + this.sci;
+            };
+            result.getAvg = function(){
+                return this.getSum()/4;
+            };
+            result.toString = function(){
+                var output = '';
+                for(let key in this){
+                    if(key != 'getSum' && key != 'getAvg' && key != 'toString'){
+                        output += key + ':' + this[key] + '';
+                    }else if(key == 'getSum'){
+                        output += key.substring(3) + ':' + this[key]() + '';
+                    }else if(key == 'getAvg'){
+                        output += key.substring(3) + ':' + this[key]() + '\n';
+                    }//if
+                }//for
+                return output;
+            };
+            return result;
+        } // makeStudent 함수
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

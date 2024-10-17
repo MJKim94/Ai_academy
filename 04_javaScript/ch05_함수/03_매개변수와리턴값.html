@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <script>
+    // var i = Number(prompt('i의 j승을 구하려는데 i값은?'));
+    // var j = Number(prompt('j값은?'));
+    // document.write('i('+ i +')의 j(' + j + ')승은 ' + pow(i, j) + '<br>');
+    // 선언된 매개변수보다 많은 경우
+    document.write('pow(2, 3, 10, 100) = ' + pow(2,3,10, 100) + '<br>');
+    document.write('pow(2, 3, 10) = ' + pow(2,3,10) + '<br>');
+    // 선언된 매개변수보다 적은 경우
+    document.write('pow(2) = ' + pow(2) + '<br>');
+    document.write('pow() = ' + pow() + '<br>');
+    function pow(x, y){ // x의 y승을 return
+      var result = 1;
+      for(let cnt=1 ; cnt<=y ; cnt++){
+        result *= x; //result = result * x;
+      }
+      //return result;
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

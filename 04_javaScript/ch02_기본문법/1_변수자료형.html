@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        //자료형 : string, number, boolean, function, object(array), undefined
+        var va;
+        document.write("1. va타입 : " + typeof(va) + " -값 : " +va + "<br>");
+        va = "이름은 '홍길동' 입니다";
+        document.write("2. va타입 : " + typeof(va) + " -값 : "+ va + "<br>");
+        va = -123456.12;
+        document.write("3. va타입 : " + typeof(va) + " -값 : "+ va + "<br>");
+        va = true;
+        document.write("4. va타입 : " + typeof(va) + " -값 : "+ va + "<br>");
+        va = function(){
+            alert('함수');
+        };
+        document.write("5. va타입 : " + typeof(va) + " -값 : "+ va + "<br>");
+        // va();
+        va = [1, 2, 3, 4]; //배열
+        document.write("6. va타입 : " + typeof(va) + " -값 : "+ va + "<br>");
+        va = {'name':'홍길동','age':20};
+        document.write("7. va타입 : " + typeof(va) + " -값 : "+ va + "<br>"); 
+        /*
+        
+        */      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

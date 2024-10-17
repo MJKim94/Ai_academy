@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        var cnt = 0;
+        var startTime = new Date().getTime();
+        while(new Date().getTime() <= startTime + 1000){
+            cnt++;
+        }
+        document.write('횟수 : ' + cnt + '번<br>');
+        var cntStr = String(cnt);
+        var temp = cntStr.length % 3;
+        for(var idx=0 ; idx<cntStr.length; idx++){
+            if(temp==0){
+                if(idx!=0){
+                    document.write(',');
+                }
+                temp = 3;
+            }
+            document.write(cntStr[idx]);
+            temp --;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

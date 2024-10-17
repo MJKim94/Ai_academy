@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        let name = '홍길동';
+        let fun = function(){};
+        let person = {
+            'name':'홍길동',
+            'age':22,
+            eat:function(food){//객체 내 메소드에서는 this 키워드 생략 불가
+                let msg = this.age + '살' + this.name + '님은' + food + '를 먹습니다';
+                alert(msg);
+            }
+        };
+        document.write(person['name'] + '<br>');
+        person.eat("맛없는 점심");
+        document.write(person + '<br>');
+        document.write(person.toString());
+        alert(person);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

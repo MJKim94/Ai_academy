@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        let cnt = 0; // 누적횟수
+        let right = 0; // 점수를 제대로 입력한 횟수
+        let wrong = 0; // 점수를 잘못입력한 횟수
+        let sum = 0; // 점수를 제대로 입력했을경우 누적합
+        // do{
+        //     conStr = confirm("점수를 누적 하시겠습니까?");
+        //     if(conStr){
+        //         score = prompt("누적할 점수는? 0 ~ 100점 입력해주세요 ");
+        //     if(score !== null){
+        //         score = Number(score);
+        //         cnt++;
+        //         if(!isNaN(score) && score >=0 && score <=100){
+        //             right++;
+        //             sum += score;
+        //         }else{
+        //             wrong++;
+        //         }
+        //     }
+        // }
+        // }while(conStr);
+        // document.write(cnt + ': 번 입력' + '<br>');
+        // document.write('누적점수 : ' + sum + '<br>');
+        // document.write('점수를 제대로 입력한 횟수 : ' + right + '<br>');
+        // document.write('점수를 잘못 입력한 횟수 : ' + wrong + '<br>');
+
+        
+        while(confirm("점수를 누적하시겠습니까?")){
+            score = prompt("누적할 점수는? 0 ~ 100 점 입력해주세요 ");
+            score = parseInt(score);
+            cnt++;
+            if(!isNaN(score) && score > 0 && score < 100){
+                right++;
+                sum += score;
+            }else{
+                wrong++;
+            }
+        }
+        document.write(cnt + ': 번 입력' + '<br>');
+        document.write('누적점수 : ' + sum + '<br>');
+        document.write('점수를 제대로 입력한 횟수 : ' + right + '<br>');
+        document.write('점수를 잘못 입력한 횟수 : ' + wrong + '<br>');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        // 경고창 순서가 : 3 -> 3 -> 3  / 0 -> 1 -> 2 로 수정
+        // 방법1. i를 지역 변수로 수정을 하면 지역변수 ver : 전역변수 let : 지역변수
+        // 방법2. 자기호출 함수를 이용한다  
+        for(var i=0 ; i<3 ; i++){
+                (function(a){
+                setTimeout(()=> alert(a), 0);
+            })(i);
+        }
+        //방법3 : 배열이용
+        [0, 1, 2].forEach((data, idx) => {
+            setTimeout(() => alert(data), 0);
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

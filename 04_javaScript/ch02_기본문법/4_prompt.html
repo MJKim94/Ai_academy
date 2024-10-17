@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        let scoreStr = prompt('점수를 입력하세요', '0 ~ 100');
+        document.write('scoreStr타입 :' + typeof(scoreStr) + ', 값 :' + scoreStr + '<br>');
+        let score = parseInt(scoreStr); // "99" -> 99 ?
+        document.write('score타입 :' + typeof(score) + ', 값 :' + score + '<br>');
+        if(! isNaN(score)){
+            var msg = score>=80? "굿":"에에?";
+            document.write(msg);
+        }else{
+            document.write('점수입력하라고');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        var arr = [1, 2, '홍길동', true, function(){alert(1);}, [1, 2]];
+        document.write('arr의 타입 :'+typeof(arr)+',값 :'+arr +'<br>');
+        document.write('arr의 방의 갯수 :' + arr.length + '<br>');
+        arr.push(66);
+        arr.unshift(0);
+        document.write('<hr>');
+        document.write('arr의 타입 :'+typeof(arr)+',값 :'+arr +'<br>');
+        document.write('arr의 방의 갯수 :' + arr.length + '<br>');
+        var value = arr.pop();
+        document.write('<hr>');
+        document.write('pop(삭제)한 값 :' + value + '<br>');
+        document.write('arr의 타입 :'+typeof(arr)+',값 :'+arr +'<br>');
+        document.write('arr의 방의 갯수 :' + arr.length + '<br>');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

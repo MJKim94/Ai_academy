@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <script>
+    fun(); // 선언적 함수의 호출은 선언위에서도 가능
+    document.write(fun + '<br>');
+    document.write(alert + '<br>'); // 기본 내장 함수의 코드는 볼 수 없음
+    function fun(){ // 선언적 함수
+      alert('함수');
+    }
+    fun();
+    // 선언적 함수의 재정의
+    function fun(){
+      alert('재정의한 함수');
+    }
+    document.write(fun + '<br>');
+    fun();
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

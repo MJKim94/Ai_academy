@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        var id = setInterval(()=>document.write(new Date() + '<br>'), 1000); // 1000밀리세컨 마다 콜백 함수 수행
+        // 5초 후 타이머 정지
+        setTimeout(() => {
+            clearInterval(id);
+            document.write('5초후 타이머 중지함')
+        }, 5000);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

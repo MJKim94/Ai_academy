@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <style>
+        table{
+            width: 800px;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        caption{
+            margin: 10px;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 2em;
+        }
+        tr{ 
+            background-color: white;
+            border-bottom: 1px solid green;
+            border-top: 1px solid green;
+        }        
+        td{
+            padding: 5px 13px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        document.write('<table>');
+        document.write('<caption> 2 ~ 9단 까지 구구단 </caption>')
+        document.write('<tr>');
+        for(let i=2 ; i<=9 ; i++){
+            document.write('<th>' + i + '단</th>');
+        }
+        document.write('</tr>');
+        for(let i=1 ; i <=9 ; i++){
+            document.write('<tr>');
+            for(let j=2 ; j <= 9 ; j++){
+                document.write("<td>"+j + " X " + i + " = " + (j*i) + " </td> ");
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

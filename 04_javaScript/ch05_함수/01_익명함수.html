@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <script>
+    // funVar(); 에러
+    var funVar = function(i, j){ // 함수 표현식을 이용한 익명함수
+      alert('함수표현식을 이용한 익명함수 값들 : ' + i + ',' + j);
+    };
+    document.write(funVar + '<br>');
+    funVar(10, 20); // 익명함수의 호출은 변수이름 뒤에 ()를 붙여서 호출
+    // 익명함수 재정의 후 호출시 재정의된 함수로 실행(함수 오버로딩 불가)
+    funVar = (i, j) => { // 화살표 함수를 이용한 익명함수
+      alert('화살표함수을 이용한 익명함수 값들 : ' + i +',' + j);
+    };
+    document.write(funVar + '<br>');
+    funVar(5, 6);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

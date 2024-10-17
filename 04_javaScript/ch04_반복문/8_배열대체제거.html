@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        let arr = ['가', '라', '나', '라', '다', '라', '마', '라'];
+        let copyArr = arr.slice(0, arr.length);
+        document.write('원본 arr : ' + arr + '<br>');
+        document.write('카피 arr : ' + copyArr + '<br>');
+        document.write('<hr>')
+        // splice(idx, cnt) : 배열에 idx번째부터 cnt개 제거 ()
+        for(let idx=0 ; idx<copyArr.length ; idx++){
+            if(copyArr[idx] == '라'){
+                copyArr.splice(idx, 1); // idx번째 값 1개 제거
+                idx--;
+            }
+        }
+        // copyArr.splice(1, 1);
+        // copyArr.splice(2, 1);
+        // copyArr.splice(3, 1);
+        // copyArr.splice(4, 1);
+        document.write('원본 arr : ' + arr + '<br>');
+        document.write('카피 arr : ' + copyArr + '<br>');
+        // splice(idx, cnt, 대체값) : 배열에 idx번째부터 cnt개 제거하고 그부분을 대체값으로 대체 함
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
