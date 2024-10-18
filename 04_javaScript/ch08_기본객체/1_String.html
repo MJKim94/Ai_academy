@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script>
+        var str = 'abs@abc@abc';
+        var strs = '홍길동';
+        document.write('원본 : ' + str + '<br>');
+        document.write('글씨 길이 : ' + str.length + '개' + '<br>');
+        document.write('문자 연결 :' + str.concat(strs) + '<br>');
+        // substring(a, b) : a번째 부터 b번째 앞까지 추출
+        // substring(a) : a번째 부터 끝까지 추출 
+        // substr(a, b) : a번째 부터 문자 b개 추출
+        document.write('3번째 부터 6번째 앞까지 :' + str.substring(3, 6) + '<br>');
+        document.write('3번째부터 6개 :' + str.substr(3, 8) + '<br>');
+        document.write('@가 첫번째 나오는 idx :' + str.indexOf('@') + '<br>');
+        document.write('@가 뒤에서 첫번째 나오는 idx :' + str.lastIndexOf('@') + '<br>');
+        str = '      hong      @hong.com ';
+        document.write('trim() : ' + str.trim() + '<br>'); // ★★★★★
+        document.write('replace :' + str.replace(' ', '') + '<br>'); 
+        // replace 는 첫 스페이스(' ') 만 빈스트링으로 바꿔주고 중간 스페이스 는 제거가 안된다
+        document.write('replaceAll : ' + str.replaceAll(' ', '') + '<br>');
+        // replaceAll 는 객체에 있는 모든 스페이스를 빈스트링으로 바꿀수있다
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

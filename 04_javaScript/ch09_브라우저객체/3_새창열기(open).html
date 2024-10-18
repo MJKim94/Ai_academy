@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        var child = open('', '', 'width=450,height=500,left=100,top=50');
+        // opon(속성1, 속성2, 속성3) : 새창열기 (팝업차단시 false 을 return, 성공 하면 true)
+        // 속성1 : 열린 새창의 url
+        // 속성2 : 윈도우 이름
+        // 속성3 : width, height, left, top.....
+        if(child){
+            child.document.write('<h1>곧 집간다!!!!!</h1>');
+        }else{
+            alert('팝업 차단 을 해제 부탁드립니다.');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        a{
+            font-size: 2em;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+    <script>
+        function openWin(){
+            var child = open('', 'childWin', 'width=1000,height=400'); // childWin 이름의 새창 open
+            if(!child){
+                alert('팝업 차단 풀어 색기야');
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="openWin()">새창열기</button>
+    <br>
+    <a href="http://www.google.com" target="childWin"> 구글 가고시풔?</a>
+</body>
+</html>

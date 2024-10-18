@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        var child;
+        function openLarge(){
+            child = open('5_child(large).html', '', 'width=500,height=600,');
+            if(!child){
+                alert('팝업차단해 쉑기야');
+            }
+        }
+        function closeLarge(){
+            child.close();
+        }
+    </script>
+</head> 
+<body>
+    <h2>행복해지는 C????????</h2>
+    <img src="ch09_img/small.jpg" alt="작은 그림" onmouseover="openLarge()" onmouseout="closeLarge()">
+</body>
+</html>

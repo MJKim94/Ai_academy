@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script src="dateintervalDay.js"></script>
+    <script>
+        var now = new Date();
+        document.write("now : " + now + '<br>');
+        document.write('날짜 시간 : ' + now.toLocaleString() + '<br>');
+        document.write('날짜 : ' + now.toLocaleDateString() + '<br>');
+        document.write('시간 : ' + now.toLocaleTimeString() + '<br>');
+        var limitDay = new Date(2025, 2, 7, 18, 0, 0);
+        var openDay = new Date(2024, 7, 26, 9, 30, 0);
+        document.write('open일 부터 지금 : ' + now.getIntervaDay(openDay) + '<br>');
+        document.write('지금~수료일 :' + now.getIntervaDay(limitDay) + '<br>');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

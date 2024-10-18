@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        var cnt = 0;
+        for(var key in window){
+            if(key=='onload' || key=='chk'){
+            document.write(++cnt + key + ':' + window[key] + '<br>');
+        }
+    }
+    document.write('<hr>');
+    window.onload = function(){ // onload : 이벤트 속성 변수
+        alert('윈도우가 로드됨');
+    };
+    var chk = function(){
+    
+    };
+    for(var key in window){
+        if(key == 'onload' || key == 'chk'){
+            document.write(key + ':' + window[key] + '<br>');
+        }
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
