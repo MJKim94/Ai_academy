@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+    <script>
+        var wrap;
+        window.onload = function(){
+            // 제일 많이 사용하는 방법은 1,4번째 를 많이 사용함
+            // wrap = document.getElementById('wrap');
+            // wrap = document.getElementsByTagName('div')[0];
+            wrap = document.querySelector('div#wrap');
+            // wrap = document.querySelectorAll('div#wrap')[0];
+        }
+        function append(){
+            // 마지막에 h1태그 추가(#wrap에 추가)
+            // wrap.innerHTML += '<h1>HEADER</h1>';
+            var h1 = document.createElement('h1');
+            var textNode = document.createTextNode('HEADER');
+            h1.appendChild(textNode);
+            wrap.appendChild(h1);
+            // h1태그 추가~~~
+            var header = document.querySelectorAll('h1');
+            for(var idx in header){
+                header[idx].innerHTML += '<span>#</span>';
+            }
+        }
+        function remove(){
+            // 첫번째 h1태그 하나 제거(#wrap 에 있는)
+            // var h1 = document.getElementsByTagName('h1');
+            var h1 = document.querySelectorAll('h1');
+            if(h1.length>0){
+                wrap.removeChild(h1[0]);
+            }else{
+                alert('삭제할 h1태그가 없다');
+            }
+        }
+        function removeAll(){
+            // h1태그 제거 
+            // var h1 = document.getElementsByTagName('h1');
+            var h1 = document.querySelectorAll('h1');
+            let cnt = h1.length;
+            for(var idx=0; idx<cnt ; idx++){
+                wrap.removeChild(h1[idx]);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <button onclick="removeAll()">h1태그 모두 제거</button>
+        <button onclick="remove()">h1태그 하나 제거</button>
+        <button onclick="append()">h1태그 하나 추가</button>
+        <h1>HEADER</h1>
+        <h1>HEADER</h1>
+    </div>
+</body>
+</html>

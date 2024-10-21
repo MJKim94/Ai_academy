@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    #wrap{width:450px; margin: 0 auto;}
+    #wrap h1 {color:red; margin-top: 50px; text-align: center;}
+    #wrap h3{
+      padding: 20px; margin: 10px;
+      border: 1px solid red;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    window.onload = function(){
+      //parent와 child간 데이터 통신
+      var openerName = opener.document.getElementById('name').value.trim();
+      var openerDate = opener.document.getElementById('date').value;
+      var parentDate = document.querySelector('h2.parentDate');
+      parentDate.innerHTML = '이름 :' +
+      (openerName ? openerName:'없음') + '<br>' +
+      '날짜 :' +
+      (openerDate ? openerDate: '선택안함');
+      var modifyName = document.querySelector('input[type="name"]');
+      modifyName.value = openerName;
+    };
+    function sendDate(part){
+      //modifyName의 value값을 opener의 name(input)에 넣고, part를 opener의 part(span)에 넣음
+      var name = document.querySelector('input[type="text"]').value;
+      opener.document.getElementById('name').value = name;
+      opener.document.getElementById('part').innerHTML = part;
+      close();
+    }
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <h1>인사 정보 시스템</h1>
+    <hr>
+    <h2 class="parentDate"></h2>
+    <h2>이름 수정 가능<input type="text" class="modifyName"></h2>
+    <hr>
+    <h3 onclick="sendDate('인사')">인사로 하고 닫기</h3>
+    <h3 onclick="sendDate('재무')">재무로 하고 닫기</h3>
+    <h3 onclick="sendDate('총무')">총무로 하고 닫기</h3>
+    <h3 onclick="sendDate('개발')">개발로 하고 닫기</h3>
+  </div>
+</body>
+</html>

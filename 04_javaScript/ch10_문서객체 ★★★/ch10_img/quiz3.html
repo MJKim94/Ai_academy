@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        table {
+            width:280px; 
+            height: 100px; 
+            margin: 10px auto;
+        } 
+        h3 {
+            text-align:center;
+        }
+        td{
+            border: 1px solid black;
+        }
+    </style>    
+    <script>
+        var color = ['red', 'orange', 'yellow', 'green', 'blue', 'navy', 'violet', 'white'];
+        
+        // window.onload = () =>{
+        //     var tds = document.querySelectorAll('td');
+        //     for(var idx in tds){
+        //         tds[idx].style.backgroundColor = color[idx];
+        //     }
+        // };
+        // function backgroundChange(colorIdx){
+        //     document.body.style.backgroundColor = color[colorIdx];
+        //     var h3 = document.createElement('h3');
+        //     var textNode = document.createTextNode('퀴즈 너무 싫다');
+        //     h3.appendChild(textNode);
+        //     document.body.appendChild(h3);
+        // }
+        window.onload = ()=>{
+            var tds = document.querySelectorAll('td');
+            for(var idx in tds){
+        //tds[idx].style = 'background-color:'+color[idx];
+            tds[idx].style.backgroundColor = color[idx];
+            }
+        };
+        const showMessage = (colorIdx)=>{
+            document.body.style.backgroundColor = 'black';
+      //document.body.style = 'background-color:black';
+            var h3 = document.createElement('h3');
+            var textNode = document.createTextNode('야호 거의 끝났다');
+            h3.append(textNode);
+            h3.setAttribute('class', 'message');
+            document.body.appendChild(h3);
+            h3.style.color = color[colorIdx];
+            };
+        const removeMessage = ()=>{
+            document.body.style.backgroundColor = 'white';
+            //document.body.style = 'background-color:white';
+            var message = document.getElementsByClassName('message');
+            document.body.removeChild(message[0]);
+    };
+    </script>
+</head>
+<body>
+    <h3>quiz1. 마우스를 올리면 바탕화면도 해당 색으로</h3>
+    <table>
+        <tr onmouseout="removeMessage()">
+            <td onmouseover="showMessage(0)"></td>
+            <td onmouseover="showMessage(1)"></td>
+            <td onmouseover="showMessage(2)"></td>
+            <td onmouseover="showMessage(3)"></td>
+            <td onmouseover="showMessage(4)"></td>
+            <td onmouseover="showMessage(5)"></td>
+            <td onmouseover="showMessage(6)"></td>
+          </tr>
+    </table>
+</body>
+</html>

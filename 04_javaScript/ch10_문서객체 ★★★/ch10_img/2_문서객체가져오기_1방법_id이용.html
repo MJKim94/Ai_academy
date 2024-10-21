@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+    <script>
+        var title, clock, btn;
+        var timerId;
+        var toggle = 0; //타이머가 구동중인지 구동중이 아닌지 저장하는 변수 (구동중이면 0/트루, 구동중지되면 1/펄스)
+        window.onload = function(){ 
+            title = document.getElementById('title');
+            title.innerHTML = '현재 날짜와 <span>시간</span>';
+            clock = document.getElementById('clock');
+            clock.innerHTML = new Date().toLocaleString();
+            timerId = setInterval(()=>{
+                clock.innerHTML = new Date().toLocaleString();
+            }, 1000);
+        };
+        const toggleFunction = () => {
+            if(toggle == 0){ // 0이면 타이머 중지
+                clearInterval(timerId);
+                toggle = 1;
+                btn = document.getElementById('btn');
+                btn.innerHTML = '타이머 재가동';
+            }else if(toggle == 1){ // 1이면 타이머 재가동
+                timerId = setInterval(()=>{
+                    clock.innerHTML = new Date().toLocaleString();
+                }, 1000);
+                toggle = 0;
+                btn.innerHTML = '타이머 작동중';
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1 id="title">title</h1>
+    <h1 id="clock">날짜와 시간</h1>
+    <button id="btn" onclick="toggleFunction()">으잉?</button>
+</body>
+</html>

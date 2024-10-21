@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+        
+    </style>
+    <script>
+        window.onload = function(){
+            // 문서 객체를 만드는 방법은 3가지가 있다 (3가지중 하나를 선택하는게 아닌 )
+            // 방법 1) 1_h1태그 생성 2_textNode 생성 3_textNode 와 h1 태그 연결 4_h1을 body 랑 연결
+            var h1 = document.createElement('h1');  // 1단계
+            var textNode = document.createTextNode('h1 태그 안에 text'); // 2단계
+            h1.appendChild(textNode); // 3단계
+            document.body.appendChild(h1); // 4단계
+            // ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ 
+            // 방법 2) 1_img태그 생성 2_src, alt속성변경 3_img태그를 body에 추가 
+            var img = document.createElement('img'); // 1단계
+            img.setAttribute('src', 'ch10_img/orange.jpg'); // 2단계
+            img.setAttribute('alt', '오뤤지');
+            document.body.appendChild(img); // 3단계
+            // ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ 
+            // 방법 3) 1_innerHTML을 이용(생성 보단 body에 html을 추가)
+            document.body.innerHTML += '<h1>방법 3으로 추가 </h1>';
+        };
+    </script>
+</head>
+<body>
+    <h1>Text Node</h1>
+    <img src="ch10_img/red.jpg" alt="미니사과">
+    <!-- <h1>Text</h1>
+    <img src="ch10_img/orange.jpg" alt="오뤤지"> -->
+</body>
+</html>
