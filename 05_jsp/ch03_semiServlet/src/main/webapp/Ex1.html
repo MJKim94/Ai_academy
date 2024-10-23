@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="css/ex.css" rel="stylesheet">
+</head>
+<body>
+	<!--http://localhost:8090/ch03_semiServlet/Ex1.html-->
+	<p><a href="http://localhost:8090/ch03_semiServlet/HelloWorld">HelloWorld 서블릿 가즈아!!!!</a></p>
+	<p><a href="/ch03_semiServlet/HelloWorld">HelloWorld 서블릿 가즈아!!!!</a></p>
+	<p><a href="HelloWorld">HelloWorld 서블릿 가즈아!!!!</a></p>
+	<p><button onclick="location.href='HelloWorld'">HelloWorld(get)</button></p>
+	<p>
+		<form action="HelloWorld" method="get">
+			<input type="submit" value="HelloWorld서블릿(GET)">
+		</form>
+	</p>
+	<p>
+		<form action="HelloWorld" method="POST">
+			<input type="submit" value="HelloWorld서블릿(POST)">
+		</form>
+	</p>
+</body>
+</html>

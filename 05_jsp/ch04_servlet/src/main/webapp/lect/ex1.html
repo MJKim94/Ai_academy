@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="../css/ex.css" rel="stylesheet" type="text/css">
+</head>
+<body><!---->
+	<a href="/ch04_servlet/Ex1?name=홍길동&pw=11">Ex1에게 name과 pw 넘기기</a>
+	<hr>
+	<a href="../Ex1?name=홍길동&pw=11">Ex1에게 name과 pw 넘기기</a>
+	<hr>
+	<button onclick="location.href='../Ex1?name=홍길동&pw=11'">
+		Ex1에게 name과 pw넘기기(GET)
+	</button>
+	<form action="/ch04_servlet/Ex1" method="post">
+		<p>이름 <input type="text" name="name"></p>
+		<p>비번 <input type="password" name="pw"></p>
+		<p><input type="submit" value="Ex1에게 name,pw넘기기(post방식)"></p>
+	</form>
+</body>
+</html>
