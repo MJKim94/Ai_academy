@@ -1,11 +1,20 @@
 package com.lec.dao;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import com.lec.dto.Emp;
 
-public class EmpRepositoryTest {
-	public static void main(String[] args) {
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+@WebServlet("/empDaoTest")
+public class EmpRepositoryTest extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
+			throws ServletException, IOException {
 		EmpRepository empRepository = EmpRepository.getInstance();
 		ArrayList<Emp> emps = empRepository.empList();
 		System.out.println("empList()결과 :" + emps.size() + "행");
@@ -50,3 +59,4 @@ public class EmpRepositoryTest {
 		}
 	}
 }
+	

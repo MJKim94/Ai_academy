@@ -1,6 +1,6 @@
 package com.lec.dao;
 
-import java.sql.Connection;
+import java.sql.*;
 import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -8,6 +8,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
 
 import com.lec.dto.Emp;
 
@@ -20,13 +25,19 @@ public class EmpRepository {
 	public static EmpRepository getInstance() {
 		return INSTANCE;
 	}
-	private EmpRepository() {
-		try {
-			Class.forName(driver);
-		} catch (ClassNotFoundException e) {
-			System.out.println(e.getMessage());
+	private EmpRepository() {}
+		private Connection getConnection() throws SQLException {
+			Connection conn = null;
+			try {
+				Context ctx = new InitialContext();
+				DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/Oracle11g");
+				conn = ds.getConnection();
+			} catch (NamingException e) {
+				System.out.println(e.getMessage());
+			}
+			return conn;
 		}
-	}
+		
 	
 	// SELECT * FROM EMP 수행 결과 return
 	public ArrayList<Emp> empList(){
@@ -36,7 +47,8 @@ public class EmpRepository {
         ResultSet rs = null;
         String query = "SELECT * FROM EMP";
         try {
-            conn = DriverManager.getConnection(url, uid, upw);
+            //conn = DriverManager.getConnection(url, uid, upw);
+        	conn = getConnection();
             stmt = conn.createStatement();
             rs = stmt.executeQuery(query);
             while(rs.next()) {
@@ -74,7 +86,8 @@ public class EmpRepository {
         		+ "    WHERE E.DEPTNO LIKE '%'||?"
         		+ "    AND E.DEPTNO=D.DEPTNO";
         try {
-            conn = DriverManager.getConnection(url, uid, upw);
+//            conn = DriverManager.getConnection(url, uid, upw);
+        	conn = getConnection();
             pstmt = conn.prepareStatement(query);
             pstmt.setString(1, deptnoStr);
             rs = pstmt.executeQuery();
@@ -115,7 +128,8 @@ public class EmpRepository {
         		+ "    AND ENAME"
         		+ "    LIKE '%'||TRIM(UPPER(?))||'%'";
         try {
-            conn = DriverManager.getConnection(url, uid, upw);
+//            conn = DriverManager.getConnection(url, uid, upw);
+        	conn = getConnection();
             pstmt = conn.prepareStatement(query);
             pstmt.setString(1, schName);
             rs = pstmt.executeQuery();
